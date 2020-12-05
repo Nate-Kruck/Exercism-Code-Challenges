@@ -6,6 +6,3 @@ export const reverseString = (str) => {
   }
     return newString;
 }
-
-reverseString('robot');
-reverseString('Ramen');
