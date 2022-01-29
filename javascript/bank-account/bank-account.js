@@ -7,6 +7,7 @@ export class BankAccount {
 
   constructor(amount = 0) {
     this.amount = amount;
+    this.closed = "Account Closed";
   }
 
   open() {
@@ -14,11 +15,11 @@ export class BankAccount {
   }
   
   close() {
-    throw new Error('Remove this statement and implement this function');
+    return this.closed;
   }
   
   deposit(amount) {
-    this.amount = this.amount + amount;
+    this.amount = this.amount + amount
     return this.amount;
   }
   
@@ -28,10 +29,12 @@ export class BankAccount {
   
   get balance() {
     const account = new BankAccount(0);
+    account.open;
     account.deposit(100);
     account.deposit(50);
     account.withdraw(100);
     account.withdraw(50);
+    
     return this.amount;
   }
 
